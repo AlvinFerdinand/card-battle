@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Card Battle</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="src/main.js"></script>
+  </head>
+  <body>
+    <main class="table" data-table>
+      <header class="scoreboard">
+        <div class="score">
+          <span class="score-label">Kamu</span>
+          <strong data-player-score>0</strong>
+        </div>
+        <div class="round" data-round></div>
+        <div class="score">
+          <span class="score-label">Bot</span>
+          <strong data-bot-score>0</strong>
+        </div>
+      </header>
+
+      <section class="hand hand--bot" data-bot-hand aria-label="Kartu bot"></section>
+
+      <section class="arena" data-arena aria-label="Arena pertarungan">
+        <div class="combatant">
+          <div class="slot" data-bot-slot></div>
+          <span class="combatant-name">Bot</span>
+        </div>
+        <p class="arena-message" data-message></p>
+        <div class="combatant">
+          <div class="slot" data-player-slot></div>
+          <span class="combatant-name">Kamu</span>
+        </div>
+      </section>
+
+      <section class="hand hand--player" data-player-hand aria-label="Kartu kamu"></section>
+    </main>
+
+    <section class="overlay" data-overlay hidden>
+      <div class="panel">
+        <h1 data-overlay-title></h1>
+        <div data-overlay-body></div>
+        <button type="button" data-overlay-action></button>
+      </div>
+    </section>
+  </body>
+</html>
